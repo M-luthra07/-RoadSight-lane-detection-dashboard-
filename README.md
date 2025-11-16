@@ -29,16 +29,14 @@ git clone https://github.com/your-username/lane-detection-dashboard.git
 cd lane-detection-dashboard
 ```
 
- Install Requirements
-
+### Install Requirements
 Create a requirements.txt:
+- flask
+- opencv-python
+- numpy
 
-flask
-opencv-python
-numpy
 
-
-Then install:
+### Then install:
 ```bash
 
 pip install -r requirements.txt
@@ -47,11 +45,12 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open in your browser:
-
+### Open in your browser:
+```bash
 http://127.0.0.1:5000/
+```
 
-📁 Project Structure
+### 📁 Project Structure
 static/
  ├── uploads/   → User uploaded files
  ├── output/    → Processed output files
