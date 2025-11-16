@@ -53,14 +53,16 @@ http://127.0.0.1:5000/
 ```
 
 ### 📁 Project Structure
-static/
- ├── uploads/    → User uploaded files
- ├── output/     → Processed output files
+
+#### static/
+ ├── uploads/     → User uploaded files
+ ├── output/      → Processed output files
 
 templates/
- └── index.html  → Frontend UI
+ └── index.html   → Frontend UI
 
-app.py           → Flask backend + lane detection pipeline
+app.py            → Flask backend + lane detection pipeline
+
 
 
 ### 🧠 Lane Detection Pipeline
