@@ -40,8 +40,10 @@ Create a requirements.txt:
 ```bash
 
 pip install -r requirements.txt
+```
 
-▶️ Run the Flask App
+### ▶️ Run the Flask App
+```bash
 python app.py
 ```
 
@@ -52,11 +54,14 @@ http://127.0.0.1:5000/
 
 ### 📁 Project Structure
 static/
- ├── uploads/   → User uploaded files
- ├── output/    → Processed output files
+ ├── uploads/    → User uploaded files
+ ├── output/     → Processed output files
+
 templates/
- └── index.html
-app.py
+ └── index.html  → Frontend UI
+
+app.py           → Flask backend + lane detection pipeline
+
 
 ### 🧠 Lane Detection Pipeline
  The project uses:
