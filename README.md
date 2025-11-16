@@ -1,13 +1,13 @@
-#🚘 Lane Detection Dashboard
+# 🚘 Lane Detection Dashboard
 A simple Flask-based web application for lane detection in images and videos using OpenCV.
 Users can upload images or videos, and the app processes them to display lane-marked output.
 
-⭐ Features
-Upload images and detect road lanes
-Upload videos and process them frame-by-frame
-Clean visual dashboard for input/output results
-Hough Transform-based lane detection pipeline
-Works locally in any Python environment
+## ⭐ Features
+-Upload images and detect road lanes
+-Upload videos and process them frame-by-frame
+-Clean visual dashboard for input/output results
+-Hough Transform-based lane detection pipeline
+-Works locally in any Python environment
 
 📸 Demo
 Image Processing
