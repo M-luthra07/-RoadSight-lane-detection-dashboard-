@@ -58,30 +58,22 @@ templates/
  └── index.html
 app.py
 
-🧠 Lane Detection Pipeline
+### 🧠 Lane Detection Pipeline
+ The project uses:
+- ✔ Canny Edge Detection
+- ✔ Gaussian Blur
+- ✔ Polygon ROI Masking
+- ✔ Probabilistic Hough Lines
+- ✔ Slope-based left/right lane separation
 
-The project uses:
+### 🔧 Future Improvements
+- Use Deep Learning (YOLOv8, UNet) for lane detection
+- Add smoothing over frames
+- Deploy using Docker
+- Add progress bar for video processing
 
-✔ Canny Edge Detection
-✔ Gaussian Blur
-✔ Polygon ROI Masking
-✔ Probabilistic Hough Lines
-✔ Slope-based left/right lane separation
-
-🔧 Future Improvements
-
-Use Deep Learning (YOLOv8, UNet) for lane detection
-
-Add smoothing over frames
-
-Deploy using Docker
-
-Add progress bar for video processing
-
-🤝 Contributing
-
-Pull requests are welcome!
-
-📜 License
-
-MIT License
+### 🤝 Contributing
+- Pull requests are welcome!
+  
+### 📜 License
+- MIT License
