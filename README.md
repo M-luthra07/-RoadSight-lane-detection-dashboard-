@@ -10,35 +10,26 @@ Users can upload images or videos, and the app processes them to display lane-ma
 - Works locally in any Python environment
 
 ## 📸 Demo
-Image Processing
-Upload → Detect Lanes → View Output
+- Image Processing
+ Upload → Detect Lanes → View Output
+- Video Processing
+ Upload → Real-time frame processing → Render output video
 
-Video Processing
-Upload → Real-time frame processing → Render output video
+## 🚀 Technologies Used
+- Python
+- Flask
+- OpenCV
+- HTML/CSS
+- NumPy
 
-🚀 Technologies Used
-
-Python
-
-Flask
-
-OpenCV
-
-HTML/CSS
-
-NumPy
-
-📦 Installation
-1️⃣ Clone the Repository
+## 📦 Installation
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/your-username/lane-detection-dashboard.git
 cd lane-detection-dashboard
+```
 
-2️⃣ Create Virtual Environment (Optional)
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-
-3️⃣ Install Requirements
+ Install Requirements
 
 Create a requirements.txt:
 
