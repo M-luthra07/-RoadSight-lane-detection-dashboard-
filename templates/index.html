@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lane Detection Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f0f0f0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            color: #333;
+        }
+        .box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: #fafafa;
+            border-radius: 10px;
+        }
+        input[type="file"] {
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bfc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img, video {
+            margin-top: 20px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Lane Detection Dashboard</h2>
+
+    <!-- IMAGE UPLOAD -->
+    <div class="box">
+        <h3>Upload Image</h3>
+        <form action="/upload_image" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <button type="submit">Process Image</button>
+        </form>
+
+        {% if input_image %}
+        <h4>Input Image</h4>
+        <img src="{{ input_image }}" alt="Input Image">
+
+        <h4>Output Image</h4>
+        <img src="{{ output_image }}" alt="Output Image">
+        {% endif %}
+    </div>
+
+    <!-- VIDEO UPLOAD -->
+    <div class="box">
+        <h3>Upload Video</h3>
+        <form action="/upload_video" method="POST" enctype="multipart/form-data">
+            <input type="file" name="video" required>
+            <button type="submit">Process Video</button>
+        </form>
+
+        {% if input_video %}
+        <h4>Input Video</h4>
+        <video controls>
+            <source src="{{ input_video }}" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+
+        <h4>Output Video</h4>
+        <video controls>
+            <source src="{{ output_video }}" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+        {% endif %}
+    </div>
+
+</div>
+
+</body>
+</html>
