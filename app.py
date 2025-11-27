@@ -107,36 +107,26 @@ def process_image(img_path, out_path):
 
 def process_video(video_path, out_path):
     cap = cv2.VideoCapture(video_path)
-
-    # FIX: browser-compatible codec
     fourcc = cv2.VideoWriter_fourcc(*"avc1")
-
     fps = cap.get(cv2.CAP_PROP_FPS)
     if fps == 0:
         fps = 30  # fallback FPS
-
     width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
     out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
-
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
             break
-
         gray = grayscale(frame)
         blur = gaussian_blur(gray)
         edges = canny(blur)
         roi = region_of_interest(edges)
         lines = cv2.HoughLinesP(roi, 2, np.pi/180, 50, minLineLength=40, maxLineGap=100)
-
         line_img = np.zeros_like(frame)
         draw_lines(line_img, lines)
-
         output = cv2.addWeighted(frame, 0.8, line_img, 1, 0)
         out.write(output)
-
     cap.release()
     out.release()
 
